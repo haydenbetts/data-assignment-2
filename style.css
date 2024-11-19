@@ -42,6 +42,10 @@ p {
     margin-top: 1em;
 }
 
+.headline {
+    text-align: left;
+}
+
 .subhead {
     font-size: 1em;
     text-align: left;
@@ -57,14 +61,6 @@ img {
 #sankey {
     margin-top: 2em;
     width: 100%;
-    max-width: 800px; /* Ensure it doesn't exceed max design width */
-    height: auto; /* Automatically adjusts with aspect ratio */
-}
-
-/* For mobile screens */
-@media (max-width: 500px) {
-    #sankey {
-        width: 100%; /* Full width on mobile */
-        height: 300%; /* Makes the graphic 3x taller */
-    }
+    max-width: 800px;
+    height: auto;
 }
