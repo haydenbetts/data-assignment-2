@@ -1,0 +1,40 @@
+body {
+    font-family: "Playfair Display", serif;
+}
+
+.article-wrapper {
+    max-width: 800px;
+    display: block;
+    margin: auto;
+}
+
+p {
+    max-width: 600px; /* Keeps the paragraphs a manageable width */
+    margin: 1em auto; /* Centers the paragraph block within the parent container */
+    text-align: left; /* Ensures the text remains left-aligned */
+}
+
+.article-heading-wrapper {
+    text-align: center;
+}
+
+.article-image-wrapper-outer {
+    width: 800px;
+    display: block;
+    margin: auto;
+}
+
+.article-image-caption {
+    text-align: center;
+    font-size: small;
+}
+
+img {
+    width: 800px;
+    height: auto;
+}
+
+#sankey {
+    width: 800px;
+    height: 400px;
+}

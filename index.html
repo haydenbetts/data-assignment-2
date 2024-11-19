@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['sankey']});
+          google.charts.setOnLoadCallback(drawChart);
+
+          var sankey_width = 800;
+          var sankey_height = 400;
+
+    
+          function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'From');
+            data.addColumn('string', 'To');
+            data.addColumn('number', 'Dollar Amount');
+            data.addRows([
+                ["Johnson & Johnson ($229.9M)", "New York Settlement ($2.8B)", 229862769],
+                ["Mallinckrodt ($17.9M)", "New York Settlement ($2.8B)", 17949969],
+                ["Distributors ($1.18B)", "New York Settlement ($2.8B)", 1179251066],
+                ["Teva ($550M)", "New York Settlement ($2.8B)", 550000000],
+                ["Allergan ($200M)", "New York Settlement ($2.8B)", 200000000],
+                ["Walgreens ($458.2M)", "New York Settlement ($2.8B)", 458210563],
+                ["Walmart ($116M)", "New York Settlement ($2.8B)", 116000000],
+                ["McKinsey ($32.2M)", "New York Settlement ($2.8B)", 32158566],
+                ["Publicis ($19.2M)", "New York Settlement ($2.8B)", 19176750],
+
+                ["New York Settlement ($2.8B)", "Attorney General's Office (17.5%) ($490M)", 490456695],
+                ["New York Settlement ($2.8B)", "Opioid Settlement Fund (OASAS) (20%) ($560M)", 560521937],
+                ["New York Settlement ($2.8B)", "OASAS Regional Spending (16.39%) ($459M)", 459347727],
+                ["New York Settlement ($2.8B)", "City of New York (20.0%) ($560M)", 560521937],
+                ["New York Settlement ($2.8B)", "Nassau County (6.68%) ($187M)", 187214327],
+                ["New York Settlement ($2.8B)", "Suffolk County (8.63%) ($241M)", 241865215],
+                ["New York Settlement ($2.8B)", "Other Counties for Remediation (5.4%) ($151M)", 151340923],
+                ["New York Settlement ($2.8B)", "Other Counties Unrestricted (5.4%) ($151M)", 151340923]
+        ]);
+            // Sets chart options.
+            var options = {
+              width: sankey_width,
+              height: sankey_height
+            };
+    
+            // Instantiates and draws our chart, passing in some options.
+            var chart = new google.visualization.Sankey(document.getElementById('sankey'));
+            chart.draw(data, options);
+          }
+        </script>
+    </head>
+    <body>
+        <div class="article-image-wrapper-outer">
+            <div class="article-wrapper">
+                <div class="article-heading-wrapper">
+                    <h1>Even Advisory Board Struggles to Understand New York’s Opioid Fund Distribution</h1>
+                </div>
+                <img src="./images/rivera.jpg"/>
+                <div class="article-image-caption">
+                    Joyce Rivera, Executive Director of St. Ann’s Corner of Harm Reduction in her capacity as a member of the Opioid Settlement Fund Board at that Board’s October 28th, 2024 meeting. Courtesy, New York State Opioid Settlement Advisory Board 
+                </div>
+
+                <div class="article-body-wrapper">
+                    <p>
+                        <b>By Hayden Betts</b>
+                    </p>
+                    <p>
+                        Nov. 19, 2024
+                    </p>
+                    <p>
+                        “There needs to be a design of a course called Opioid Funding 101,” said Opioid Settlement Fund Advisory Board Chair Debra Pantin at a September 12th meeting of that body. Pantin's comment came after a nearly 10-minute discussion about one of the finer points of how the money is distributed from opioid manufacturers to counties. The advisory board had been meeting twice monthly for nearly two years.
+                    </p>
+                    <p>
+                        The complexity of the scheme by which the $2.8 billion dollars the Attorney General won from companies involved in the manufacture and distribution of opioids in New York State moves from the state to agencies and municipalities that have discretion to spend the funds has made oversight difficult. According to Christine Minhee's <a href="https://www.opioidsettlementtracker.com/" target="_">Opioid Settlement Tracker</a>, a resource widely relied upon by activists in New York State, only 36.4% of settlment funds in New York State are subject to mandatory public reporting requirements.
+                    </p>
+                    <p> 
+                        The lack of mandated reporting requirements means that agencies that distribute funds can report as much or as little as they want about how they are spending the money. New York City, which has taken in $90 million of the $560 million opioid settlement fund allocation that it is set to receive between 2022 and 2040 has faced fierce criticism for the lack of granularity of the data in shares.
+
+                        At a Septemmber 12th meeting of the Opioid Settlment Advisory board, Board member Anne Constantino sad that a spending report produced by the New York City Health Department had an “Appalling lack of substantial data,”
+
+                    </p>
+
+                    <div id="sankey"></div>
+                    <div class="article-image-caption">
+                        New York State Opioid Settlement Funding. Source "Christine Minhee, J.D., OpioidSettlementTracker.com” and <a target="_" href="https://nationalopioidsettlement.com/wp-content/uploads/2021/09/NY-Sharing-Agreement.pdf">Exhibit N, Section II.B of the New York Opioid Settlement Sharing Agreement</a>. Graphic by Hayden Betts
+                    </div>
+                    <p>
+                        Only those tranches of spending controlled by the Office of Addiction Services and Supports (OASAS) are subject to mandated reporting. Ironically, those tranches of funding, which are spent by health officials with knowledge of best practices for harm reduction, are of less concern to board members than any others.
+                    </p>
+                    <p>
+                        Board members have expressed particular concern about the tranche of funds that flows directly to elected county executives. On September 12th, board member Stephanie Marquesano said “There are counties that I’ve heard about that have slipped through the cracks.” The spending of the funds that counties receive directly, known as “direct share subdivisions” are subject only to self-imposed public reporting requirements like that done by the NYC Health Department. 
+                    </p>
+                    <p>
+                        Allegations of misused county funding have started to surface around the state. Nassau County executives have faced scrutiny from county legislator Delia DeRiggi-Whitton for dispersing less than 10% of the $85 million in settlement funds the county received from the state. County executives there chose to collect interest on the money and to use the capital to “improve the county's bond rating.”
+                    </p>
+                    <p>
+                        Suffolk County’s comptroller launched an audit of $57 million of its opioid settlement spending in April after a News Day report about a county official who chaired the committee that dispersed funds taking a top job at a non-profit that received $1.8 million.
+                    </p>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
