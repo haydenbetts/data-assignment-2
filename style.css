@@ -9,10 +9,22 @@ body {
 }
 
 p {
-    max-width: 600px; /* Keeps the paragraphs a manageable width */
-    margin: 1em auto; /* Centers the paragraph block within the parent container */
-    text-align: left; /* Ensures the text remains left-aligned */
+    margin: 1em 0;
+    text-align: left;
 }
+
+/* Little tweaks to paragraph spacing to make it look better on mobile */
+@media (max-width: 500px) {
+    p {
+        margin: .8em 0; /* Increased top and bottom margin for mobile */
+    }
+
+    .article-wrapper {
+        display: block;
+        margin: auto;
+    }
+}
+
 
 .article-heading-wrapper {
     text-align: center;
@@ -27,6 +39,7 @@ p {
 .article-image-caption {
     text-align: center;
     font-size: small;
+    margin-top: 1em;
 }
 
 img {
@@ -35,6 +48,7 @@ img {
 }
 
 #sankey {
+    margin-top: 2em;
     width: 800px;
     height: 400px;
 }
